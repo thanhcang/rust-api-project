@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  rust-api-proj:
+    build: 
+      context: .
+      target: final
+    ports:
+      - "8080:8080"
+    environment:
+      - RUST_LOG=info
+    # Uncomment the following lines if your application requires a database
+    # depends_on:
+    #   - db
+    # volumes:
+    #   - .:/usr/src/app
+    #   - cargo_cache:/usr/local/cargo/registry
+
+  # Example of a PostgreSQL database service
+  # db:
+  #   image: postgres:latest
+  #   environment:
+  #     POSTGRES_DB: example
+  #     POSTGRES_USER: user
+  #     POSTGRES_PASSWORD: password
+  #   volumes:
+  #     - postgres_data:/var/lib

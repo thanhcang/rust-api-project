@@ -1,7 +1,7 @@
 
 mod user;
 
-use actix_web::{get, post, error, web, App, HttpResponse, HttpServer, Responder,Error};
+use actix_web::{get, error, web, App, HttpResponse, HttpServer, Responder};
 use user::Info;
 
 
